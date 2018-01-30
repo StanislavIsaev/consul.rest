@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: Service1
+  cloud:
+    consul:
+      discovery:
+        instance-id: ${spring.application.name}:${random.value}
+server:
+  port: ${random.int(8501,9000)}
